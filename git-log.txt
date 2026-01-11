@@ -1,0 +1,119 @@
+git init
+git commit --allow-empty -m "Initial commit"
+git branch -m master
+git branch develop
+git checkout develop
+git checkout -b feature/init-project
+git status
+git add .gitignore
+git commit -m "Dodawanie gitignore dla kompilacji Visual Studio i plików użytkownika"
+git add InvoiceSystem.sln
+git commit -m "Visual Studio solution file"
+
+git add InvoiceSystem/InvoiceSystem.csproj
+git commit -m "C# project configuration file"
+
+git add InvoiceSystem/Program.cs
+git commit -m "Application entry point"
+
+git add InvoiceSystem/App.config
+git commit -m "Application configuration file"
+
+git add InvoiceSystem/Database.cs
+git commit -m "Ddatabase access logic"
+
+git add InvoiceSystem/Session.cs
+git commit -m "User session handling"
+
+
+git add InvoiceSystem/MainForm.cs
+git commit -m "Main application form logic"
+git add InvoiceSystem/MainForm.Designer.cs
+git commit -m "Main form UI designer code"
+git add InvoiceSystem/MainForm.resx
+git commit -m "Main form resources"
+
+git add InvoiceSystem/Form1.cs
+git commit -m "Form1 logic"
+git add InvoiceSystem/Form1.Designer.cs
+git commit -m "Form1 UI designer code"
+git add InvoiceSystem/Form1.resx
+git commit -m "Form1 resources"
+
+git add InvoiceSystem/LoginForm.cs
+git commit -m "Login form logic"
+git add InvoiceSystem/LoginForm.Designer.cs
+git commit -m "Login form UI designer code"
+git add InvoiceSystem/LoginForm.resx
+git commit -m "Login form resources"
+
+git add InvoiceSystem/RegisterForm.cs
+git commit -m "Register form logic"
+git add InvoiceSystem/RegisterForm.Designer.cs
+git commit -m "Register form UI designer code"
+git add InvoiceSystem/RegisterForm.resx
+git commit -m "Register form resources"
+
+git add InvoiceSystem/InvoiceForm.cs
+git commit -m "Invoice form logic"
+git add InvoiceSystem/InvoiceForm.Designer.cs
+git commit -m "Invoice form UI designer code"
+git add InvoiceSystem/InvoiceForm.resx
+git commit -m "Invoice form resources"
+
+git add InvoiceSystem/ContractorForm.cs
+git commit -m "Contractor form logic"
+git add InvoiceSystem/ContractorForm.Designer.cs
+git commit -m "Contractor form UI designer code"
+git add InvoiceSystem/ContractorForm.resx
+git commit -m "Contractor form resources"
+
+git add InvoiceSystem/TwoFactorForm.cs
+git commit -m "Two-factor form logic"
+git add InvoiceSystem/TwoFactorForm.Designer.cs
+git commit -m "Two-factor form UI designer code"
+git add InvoiceSystem/TwoFactorForm.resx
+git commit -m "Two-factor form resources"
+
+git add InvoiceSystem/Properties/AssemblyInfo.cs
+git commit -m "Assembly metadata configuration"
+git add InvoiceSystem/Properties/Resources.resx
+git commit -m "Application resources file"
+git add InvoiceSystem/Properties/Resources.Designer.cs
+git commit -m "Rresources designer code"
+git add InvoiceSystem/Properties/Settings.settings
+git commit -m "Application settings definition"
+git add InvoiceSystem/Properties/Settings.Designer.cs
+git commit -m "Settings designer code"
+
+git add InvoiceSystem/PdfService.cs
+git commit -m "PDF generation service"
+
+git add InvoiceSystem/packages.config
+git commit -m "NuGet packages configuration"
+
+git add .gitignore
+git commit -m "Ignore NuGet packages directory"
+
+git remote add origin https://github.com/shkraiev/git-lab.git
+git push -u origin feature/init-project
+git checkout develop
+git push -u origin develop
+git checkout master
+git push -u origin master
+
+git checkout develop
+git pull
+
+git checkout -b feature/documentation
+git add git-log.txt
+git commit -m "Add git commands log"
+git push -u origin feature/documentation
+
+git checkout develop
+git pull
+
+git checkout master
+git pull
+git merge develop
+git push origin master
